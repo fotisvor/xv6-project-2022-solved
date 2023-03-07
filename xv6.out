@@ -1,0 +1,143 @@
+
+xv6 kernel is booting
+
+hart 1 starting
+hart 2 starting
+page table 0x0000000087f6c000
+ ..0: pte 0x0000000021fda001 pa 0x0000000087f68000
+ .. ..0: pte 0x0000000021fd9c01 pa 0x0000000087f67000
+ .. .. ..0: pte 0x0000000021fda41b pa 0x0000000087f69000
+ .. .. ..1: pte 0x0000000021fd9817 pa 0x0000000087f66000
+ .. .. ..2: pte 0x0000000021fd9407 pa 0x0000000087f65000
+ .. .. ..3: pte 0x0000000021fd9017 pa 0x0000000087f64000
+ ..255: pte 0x0000000021fdac01 pa 0x0000000087f6b000
+ .. ..511: pte 0x0000000021fda801 pa 0x0000000087f6a000
+ .. .. ..510: pte 0x0000000021fdd007 pa 0x0000000087f74000
+ .. .. ..511: pte 0x0000000020001c0b pa 0x0000000080007000
+init: starting sh
+page table 0x0000000087f5f000
+ ..0: pte 0x0000000021fd6c01 pa 0x0000000087f5b000
+ .. ..0: pte 0x0000000021fd6801 pa 0x0000000087f5a000
+ .. .. ..0: pte 0x0000000021fd701b pa 0x0000000087f5c000
+ .. .. ..1: pte 0x0000000021fd641b pa 0x0000000087f59000
+ .. .. ..2: pte 0x0000000021fd6017 pa 0x0000000087f58000
+ .. .. ..3: pte 0x0000000021fd5c07 pa 0x0000000087f57000
+ .. .. ..4: pte 0x0000000021fd5817 pa 0x0000000087f56000
+ ..255: pte 0x0000000021fd7801 pa 0x0000000087f5e000
+ .. ..511: pte 0x0000000021fd7401 pa 0x0000000087f5d000
+ .. .. ..510: pte 0x0000000021fdb407 pa 0x0000000087f6d000
+ .. .. ..511: pte 0x0000000020001c0b pa 0x0000000080007000
+$ usertests
+page table 0x0000000087f51000
+ ..0: pte 0x0000000021fd3401 pa 0x0000000087f4d000
+ .. ..0: pte 0x0000000021fd3001 pa 0x0000000087f4c000
+ .. .. ..0: pte 0x0000000021fd381b pa 0x0000000087f4e000
+ .. .. ..1: pte 0x0000000021fd2c1b pa 0x0000000087f4b000
+ .. .. ..2: pte 0x0000000021fd281b pa 0x0000000087f4a000
+ .. .. ..3: pte 0x0000000021fd241b pa 0x0000000087f49000
+ .. .. ..4: pte 0x0000000021fd201b pa 0x0000000087f48000
+ .. .. ..5: pte 0x0000000021fd1c1b pa 0x0000000087f47000
+ .. .. ..6: pte 0x0000000021fd181b pa 0x0000000087f46000
+ .. .. ..7: pte 0x0000000021fd141b pa 0x0000000087f45000
+ .. .. ..8: pte 0x0000000021fd101b pa 0x0000000087f44000
+ .. .. ..9: pte 0x0000000021fd0c17 pa 0x0000000087f43000
+ .. .. ..10: pte 0x0000000021fd0817 pa 0x0000000087f42000
+ .. .. ..11: pte 0x0000000021fd0417 pa 0x0000000087f41000
+ .. .. ..12: pte 0x0000000021fd0017 pa 0x0000000087f40000
+ .. .. ..13: pte 0x0000000021fcfc17 pa 0x0000000087f3f000
+ .. .. ..14: pte 0x0000000021fcf817 pa 0x0000000087f3e000
+ .. .. ..15: pte 0x0000000021fcf417 pa 0x0000000087f3d000
+ .. .. ..16: pte 0x0000000021fcf007 pa 0x0000000087f3c000
+ .. .. ..17: pte 0x0000000021fcec17 pa 0x0000000087f3b000
+ ..255: pte 0x0000000021fd4001 pa 0x0000000087f50000
+ .. ..511: pte 0x0000000021fd3c01 pa 0x0000000087f4f000
+ .. .. ..510: pte 0x0000000021fd8007 pa 0x0000000087f60000
+ .. .. ..511: pte 0x0000000020001c0b pa 0x0000000080007000
+usertests starting
+test copyin: OK
+test copyout: OK
+test copyinstr1: OK
+test copyinstr2: OK
+test copyinstr3: OK
+test rwsbrk: OK
+test truncate1: OK
+test truncate2: OK
+test truncate3: OK
+test openiput: OK
+test exitiput: OK
+test iput: OK
+test opentest: OK
+test writetest: OK
+test writebig: OK
+test createtest: OK
+test dirtest: OK
+test exectest: page table 0x0000000085d2f000
+ ..0: pte 0x000000002194cc01 pa 0x0000000086533000
+ .. ..0: pte 0x00000000219cd001 pa 0x0000000086734000
+ .. .. ..0: pte 0x00000000218cc81b pa 0x0000000086332000
+ .. .. ..1: pte 0x0000000021a4d417 pa 0x0000000086935000
+ .. .. ..2: pte 0x0000000021acd807 pa 0x0000000086b36000
+ .. .. ..3: pte 0x0000000021b4dc17 pa 0x0000000086d37000
+ ..255: pte 0x00000000217cc001 pa 0x0000000085f30000
+ .. ..511: pte 0x000000002184c401 pa 0x0000000086131000
+ .. .. ..510: pte 0x0000000020cc6807 pa 0x000000008331a000
+ .. .. ..511: pte 0x0000000020001c0b pa 0x0000000080007000
+OK
+test pipe1: OK
+test killstatus: OK
+test preempt: kill... wait... OK
+test exitwait: OK
+test reparent: OK
+test twochildren: OK
+test forkfork: OK
+test forkforkfork: OK
+test reparent2: OK
+test mem: OK
+test sharedfd: OK
+test fourfiles: OK
+test createdelete: OK
+test unlinkread: OK
+test linktest: OK
+test concreate: OK
+test linkunlink: OK
+test subdir: OK
+test bigwrite: OK
+test bigfile: OK
+test fourteen: OK
+test rmdot: OK
+test dirfile: OK
+test iref: OK
+test forktest: OK
+test sbrkbasic: OK
+test sbrkmuch: OK
+test kernmem: OK
+test MAXVAplus: OK
+test sbrkfail: OK
+test sbrkarg: OK
+test validatetest: OK
+test bsstest: OK
+test bigargtest: OK
+test argptest: OK
+test stacktest: OK
+test textwrite: OK
+test pgbug: OK
+test sbrkbugs: usertrap(): unexpected scause 0x000000000000000c pid=6566
+            sepc=0x0000000000005c5e stval=0x0000000000005c5e
+usertrap(): unexpected scause 0x000000000000000c pid=6567
+            sepc=0x0000000000005c5e stval=0x0000000000005c5e
+OK
+test sbrklast: OK
+test sbrk8000: OK
+test badarg: OK
+usertests slow tests starting
+test bigdir: OK
+test manywrites: OK
+test badwrite: OK
+test execout: OK
+test diskfull: balloc: out of blocks
+ialloc: no inodes
+OK
+test outofinodes: ialloc: no inodes
+OK
+ALL TESTS PASSED
+$ qemu-system-riscv64: terminating on signal 15 from pid 543 (make)
